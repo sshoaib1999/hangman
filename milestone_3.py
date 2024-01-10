@@ -1,44 +1,34 @@
-<<<<<<< HEAD
 import random
 
-words = ['apple', 'banana', 'orange', 'strawberry', 'kiwi'] 
-secret_word = random.choice(words)
+# list of 5 favourite fruits
 
-def ask_for_input():
-  guess = input("Guess a letter: ")
-  return guess
+word_list = ["apple", "banana", "orange", "pineapple", "mango"]
+
+print(word_list)
+
+word = random.choice(word_list)
+ 
+print(word)
 
 def check_guess(guess):
-  if guess in secret_word:
-    print(f"Good guess! {guess} is in the word.") 
+  guess.lower
+  if guess in word:
+    print(f"Good guess! {guess} is in the word.")
   else:
     print(f"Sorry, {guess} is not in the word. Try again.")
 
-while True:
-  guess = ask_for_input()
-  check_guess(guess)
-  
-  if guess in secret_word:
-=======
-import random
-
-words = ['apple', 'banana', 'orange', 'strawberry', 'kiwi'] 
-secret_word = random.choice(words)
-
 def ask_for_input():
-  guess = input("Guess a letter: ")
-  return guess
+  while True:
 
-def check_guess(guess):
-  if guess in secret_word:
-    print(f"Good guess! {guess} is in the word.") 
-  else:
-    print(f"Sorry, {guess} is not in the word. Try again.")
+    guess = input("Enter a single letter: ")
 
-while True:
-  guess = ask_for_input()
+    if (len(guess) == 1) and (guess.isalpha() == 1):
+      print("Good guess!")
+      break
+    else:
+      print("Invalid letter. Please, enter a single alphabetical character.")
   check_guess(guess)
-  
-  if guess in secret_word:
->>>>>>> 38bac94 (made changes to original)
-    break
+
+ask_for_input()
+
+
